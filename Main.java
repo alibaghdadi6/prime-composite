@@ -20,7 +20,7 @@ public class Main
       boolean validInput = false;
       BigInteger prime = one; // Initializes value
 
-      while (!validInput)
+      while (!validInput) // Continues to run till the variable "prime" is set to a positive integer
       {
         System.out.print("Enter a positive integer to test: ");
         input = in.next();
