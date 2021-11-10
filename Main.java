@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main
 {
   public static void main(String[] args) throws java.lang.Exception
-	{    
+  {    
     boolean runAgain = false;
     Scanner in = new Scanner(System.in);
 
@@ -45,11 +45,11 @@ public class Main
 
       // Used to calculate elapsed time, starts "clock"
       long startTimeMillis = System.currentTimeMillis();
-
-		  boolean isComposite = false;
+      
+      boolean isComposite = false;
       boolean isZeroOrOne = false;
 
-		  if (prime.compareTo(one) < 1) // prime is 0 or 1
+      if (prime.compareTo(one) < 1) // prime is 0 or 1
       {
         if (prime.compareTo(zero) == 0) // prime is 0
         {
@@ -65,17 +65,17 @@ public class Main
       for (BigInteger i = one; limit.compareTo(i) >= 0; i = i.add(one))
       {
         if (zero.compareTo(prime.remainder(i)) == 0 && i != one && prime.divide(i) != one)
-	{
-	  System.out.println("Success! The factors are " + i + " and " + prime.divide(i) + ".");
-	  isComposite = true;
-	  break;
+	      {
+	        System.out.println("Success! The factors are " + i + " and " + prime.divide(i) + ".");
+	        isComposite = true;
+	        break;
         }
       }
 	
       // Reached when the above for loop ends, whether it has found a prime factor or not
       if (!isComposite && !isZeroOrOne)
       {
-	System.out.println("It appears the number " + prime + " is prime!");
+				System.out.println("It appears the number " + prime + " is prime!");
       }
 	    
       // Calculates the time in milliseconds taken to complete the calculation
