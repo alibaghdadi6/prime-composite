@@ -63,21 +63,21 @@ public class Main
       }
 
       for (BigInteger i = one; limit.compareTo(i) >= 0; i = i.add(one))
-		  {
+      {
         if (zero.compareTo(prime.remainder(i)) == 0 && i != one && prime.divide(i) != one)
-		  	{
-		  		System.out.println("Success! The factors are " + i + " and " + prime.divide(i) + ".");
-		  		isComposite = true;
-		  	  break;
+	{
+	  System.out.println("Success! The factors are " + i + " and " + prime.divide(i) + ".");
+	  isComposite = true;
+	  break;
         }
-	  	}
-
-     // Reached when the above for loop ends, whether it has found a prime factor or not
-	  	if (!isComposite && !isZeroOrOne)
-	  	{
-	  		System.out.println("It appears the number " + prime + " is prime!");
-		  }
-
+      }
+	
+      // Reached when the above for loop ends, whether it has found a prime factor or not
+      if (!isComposite && !isZeroOrOne)
+      {
+	System.out.println("It appears the number " + prime + " is prime!");
+      }
+	    
       // Calculates the time in milliseconds taken to complete the calculation
       long elapsedTimeMillis = System.currentTimeMillis() - startTimeMillis;
 
